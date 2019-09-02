@@ -1,0 +1,27 @@
+.img-car, .img-car2{
+    margin-left: 0%;
+}
+
+header{
+    text-align: center;
+}
+
+header h1{
+    color: rgb(248, 117, 65);
+}
+
+header img{
+    width: 10vw;
+}
+
+header p{
+    color: white;
+    background-color: coral;
+    font-size: 5vw;
+}
+
+.img-car, .img-car2{
+    width: 20vw;
+}
+
+/*# sourceMappingURL=style.css.map */
