@@ -38,6 +38,7 @@ Template Name: Testimonials Page
 						<?php
 							$testimonials_args = array (
 								'post_type' => 'testimonials',
+								//post number that we want to show in the list, exclude the last entry
 								'posts_per_page' => -1,
 								'orderby' => 'date',
 								'order' => 'DESC'
@@ -50,12 +51,13 @@ Template Name: Testimonials Page
 									?>
 										<div class="quote" itemprop="review" itemscope="" itemtype="http://schema.org/Review">
 											<blockquote class="testimonials-text" itemprop="reviewBody">
-												<p><?php the_content(); ?></p>
-												<hr>
+												//Read a section of a file; 14 characters starting from the 1st character
+												<p><?php the_content($testimonials_posts, FALSE, NULL, 0, 14); ?></p>
 												<p><i><?php the_date(); ?></i></p>
 											</blockquote>
 											<cite class="author" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-												<span itemprop="name"><?php the_title(); ?></span>
+												//Hyperlink	
+											<span itemprop="name"><a href="<?php the_content ?>"><?php the_title(); ?></a></span>
 											</cite><!--/.author-->
 										</div><!-- End .quote -->
 									<?php } ?>
