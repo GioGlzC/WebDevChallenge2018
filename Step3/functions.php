@@ -1,5 +1,13 @@
 <?php
 add_filter('gform_register_init_scripts', 'gform_display_weeks', 10, 2);
+
+/*It is a form that estimates the days of pregnancy or weeks of pregnancy.
+Can select from a list of options, make a estimation by calculating the difference 
+between the date the form is completed and the current date, 
+If the calculation is close to week ten, a reminder message is displayed in which it 
+is recommended to use abortion pills at home, because it is safer
+The message is displayed according to the language of the user*/
+
 function gform_display_weeks($form) {
 $script = <<<EOT
   (function($){
@@ -337,7 +345,15 @@ function bones_register_sidebars() {
     'before_title' => '<h2 class="h3 module__title">',
     'after_title' => '</h2>',
   ));
-  
+   register_sidebar(array(
+    'id' => 'sidebar-advertising',
+    'name' =><?php __( 'Advertising', 'safe2choose-test'); ?>
+    'description' => <?php _( 'Advertising-sidebar', 'safe2choose-test' ); ?>
+    'before_widget' => '<div id="%1$s" class="module module--primary cf %2$s">',
+    'after_widget' => '</div>',
+    'before_title' => '<h3 class="h3 module__title">'
+    'after_title' => '</h3>',
+  ));
 } // don't remove this bracket!
 /* DON'T DELETE THIS CLOSING TAG */ 
 ?>
