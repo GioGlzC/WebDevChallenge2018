@@ -347,8 +347,8 @@ function bones_register_sidebars() {
   ));
    register_sidebar(array(
     'id' => 'sidebar-advertising',
-    'name' =><?php __( 'Advertising', 'safe2choose-test'); ?>
-    'description' => <?php _( 'Advertising-sidebar', 'safe2choose-test' ); ?>
+    'name' => _e( 'Advertising', 'safe2choose-test');
+    'description' => _e( 'Advertising-sidebar', 'safe2choose-test' );
     'before_widget' => '<div id="%1$s" class="module module--primary cf %2$s">',
     'after_widget' => '</div>',
     'before_title' => '<h3 class="h3 module__title">'
