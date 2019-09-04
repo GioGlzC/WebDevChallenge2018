@@ -1,0 +1,66 @@
+#img-car, 
+#img-car2{
+    width: 100%;
+    margin-left: 0%;
+}
+
+#about-us, 
+#products, 
+#news{
+    background-repeat: round;
+    height: 30vw;
+    width: 100;
+    margin-block-start: 4vw;
+}
+
+#about-us{
+    background-image: url("./mobile_aboutus.jpg");
+}
+
+#products{
+    background-image: url("./mobile_products.jpg");
+    text-align: end;
+    
+}
+
+#news{
+    background-image: url("./mobile_news.jpg");
+}
+
+nav{
+    h6,
+    p{
+        color: white;
+        text-anchor: middle;
+    }
+}
+
+.control-icon{
+    width: 70%;
+}
+
+header{
+    text-align: center;
+    h1{
+        color: rgb(248, 163, 65);
+        font-size: 5vw;
+        margin: 3vw;
+    }
+
+    img{
+        width: 15vw;
+        margin: 3vw;
+    }
+
+    p{
+        color: white;
+        background-color: rgb(248, 163, 65);
+        font-size: 7vw;
+    }
+}
+
+footer{
+    img{
+        width: 4vw;
+    }
+}
